@@ -1,0 +1,49 @@
+package com.company.aula2;
+
+import java.util.Scanner;
+
+public class aula2case {
+    public static void main(String[] args) {
+        
+        Scanner entrada =new Scanner(System.in);
+        
+        System.out.println("Digite um valor de 1 a 3");
+        int opcao = entrada.nextInt();
+                 
+        switch (opcao){
+            case 1:          
+                System.out.println("Informe um numero");
+                int valor=entrada.nextInt();
+                String resultado=(valor%2==0)?"Par":"Impar";
+                System.out.println(resultado);
+                break;
+            case 2:
+                double a,b,c,x1,x2,delta;
+                
+                System.out.println("Informa os valores de a, b, c: ");
+                a = entrada.nextDouble();
+                
+                delta = Math.pow(b,2)-4*a*c;
+                
+                x1= (-b + Math.sqrt(delta))/(2*a);
+                
+                x2= (-b - Math.sqrt(delta))/(2*a);
+                                       
+                System.out.format("O delta: %.2f\n x1: %2f\n x2: %2f",delta, x1,x2);                           
+                break;
+            case 3:
+                System.out.println("Digite sua idade: ");
+                 double idade = entrada.nextDouble();
+                 if(idade >=18){
+                     System.out.println("Tem que votar");
+                 }if(idade < 70){
+                     System.out.println("Não precisa mais votar");
+                 }else {
+                     System.out.println("Não é permitido votar");
+                 }                
+                break;
+        }
+        
+    }        
+    
+}
